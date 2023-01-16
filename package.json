@@ -1,6 +1,6 @@
 {
   "name": "@across-the-stars/ngx-img-max",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular module to resize images down to a certain width and height or to reduce the quality to fit a certain maximal filesize - all in the browser.",
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "rm -rf dist && ng build ngx-img-max --configuration production",
+    "build": "ng build ngx-img-max --configuration production",
+    "build-dev": "ng build ngx-img-max --configuration development",
     "test": "ng test ngx-img-max",
     "lint": "ng lint ngx-img-max",
     "e2e": "ng e2e"
