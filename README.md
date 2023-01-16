@@ -1,6 +1,6 @@
 Package compiled for Angular 9; new versions may come up soon (no promise)
 
-# ng2-img-max
+# ngx-img-max
 Angular 2 and beyond module to resize images down to a certain width and height or to reduce the quality to fit a certain maximal filesize - all in the browser.
 
 This means, the huge image that the user may select will never even need to be uploaded to the server.
@@ -21,7 +21,7 @@ $ npm install blueimp-canvas-to-blob
 
 ## Install
 ```bash
-$ npm install ng2-img-max
+$ npm install ngx-img-max
 ```
 
 ### Import the module
@@ -30,12 +30,12 @@ Only needed for Angular versions prior to 13
 // app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Ng2ImgMaxModule } from 'ng2-img-max'; // <-- import the module
+import { NgxImgMaxModule } from 'ngx-img-max'; // <-- import the module
 import { MyComponent } from './my.component';
 
 @NgModule({
     imports: [BrowserModule,
-              Ng2ImgMaxModule // <-- include it in your app module
+              NgxImgMaxModule // <-- include it in your app module
              ],
     declarations: [MyComponent],  
     bootstrap: [MyComponent]
@@ -44,10 +44,10 @@ export class MyAppModule {}
 ```
 ## Usage
 ```TypeScript
-import { Ng2ImgMaxService } from 'ng2-img-max';
+import { NgxImgMaxService } from 'ngx-img-max';
 [...]
-    constructor(private ng2ImgMaxService: Ng2ImgMaxService) {
-        this.ng2ImgMaxService.resize([someImage], 2000, 1000).subscribe((result)=>{
+    constructor(private ngxImgMaxService: NgxImgMaxService) {
+        this.ngxImgMaxService.resize([someImage], 2000, 1000).subscribe((result)=>{
         });
     }
 }
@@ -70,7 +70,7 @@ Possible errors are: <br />
 Example code catch errors:
 
  ```TypeScript
-this.ng2ImgMaxService.resize([someImage], 2000, 1000).subscribe(result => {
+this.ngxImgMaxService.resize([someImage], 2000, 1000).subscribe(result => {
     //all good, result is a file
     console.info(result);
 }, error => {
